@@ -1,5 +1,5 @@
 # Calculator
-Calculator Web App that uses Node.js to allow to submit the inputs of the page to calculate the result of the inputs given.
+Calculator is a Web App that uses Node.js to allow to submit the inputs of the page to calculate the result of the inputs given.
 
 #### Please use the following for the operators:
 
