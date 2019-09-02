@@ -8,6 +8,15 @@ Calculator is a Web App that uses Node.js to allow to submit the inputs of the p
 - Multiplication (*)
 - Division (/)
 
+# Installation Instructions
+This repo uses Node.js, so when you download/clone the repo please go to your terminal and cd into the project's main folder and then enter the command below:
+
+```
+node calculator.js
+```
+
+This will then run the web app on http://localhost:3000/ by default.
+
 ## What I Used
 - HTML
 - Node.js
