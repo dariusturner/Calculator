@@ -1,4 +1,6 @@
 //jshint esversion:6
+
+// NPM Section
 const express = require("express");
 const bodyParser = require("body-parser");
 
@@ -9,6 +11,7 @@ var errorMessage = "<h1>404</h1><p>Sorry it seems there was an error in the inpu
 
 app.use(bodyParser.urlencoded({extended: true}));
 
+// Home Section
 app.get("/", function(req, res){
   res.sendFile(__dirname + "/index.html");
 });
@@ -43,6 +46,7 @@ app.post("/", function(req, res){
 
 });
 
+// BMI Calculator Section
 app.get("/bmicalculator", function(req, res){
   res.sendFile(__dirname + "/bmiCalculator.html");
 });
