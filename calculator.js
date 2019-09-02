@@ -5,6 +5,8 @@ const bodyParser = require("body-parser");
 const app = express();
 const port = 3000;
 
+var errorMessage = "<h1>404</h1><p>Sorry it seems there was an error in the input you gave, please try again.</p>";
+
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", function(req, res){
@@ -33,11 +35,25 @@ app.post("/", function(req, res){
       result = n1*n2;
       res.send("The product of " + n1 + " and " + n2 + " is " + result);
     } else {
-      res.send("<h1>404</h1><p>Sorry it seems there was an error in the input you gave, please try again.</p>");
+      res.send(errorMessage);
     }
   }
 
   calculate(num1, num2, operator);
+
+});
+
+app.get("/bmicalculator", function(req, res){
+  res.sendFile(__dirname + "/bmiCalculator.html");
+});
+
+app.post("/bmicalculator", function(req,res){
+
+  var weight = parseFloat(req.body.w);
+  var height = parseFloat(req.body.h);
+
+  var result = w/Math.pow(h, 2);
+  res.send("Your BMI is " + result);
 
 });
 
