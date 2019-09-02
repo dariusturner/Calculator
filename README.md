@@ -13,3 +13,7 @@ Calculator is a Web App that uses Node.js to allow to submit the inputs of the p
 - Node.js
 - Express.js
 - body-parser NPM
+
+
+## New
+- BMI Calculator at /bmicalculator
